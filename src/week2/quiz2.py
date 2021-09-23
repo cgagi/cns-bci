@@ -17,8 +17,7 @@ from week2.compute_sta import compute_sta
 import os
 
 
-# FILENAME = 'c1p8.pickle'
-FILENAME = os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'week2', 'c1p8_3.4.pickle')
+FILENAME = 'c1p8.pickle'
 
 with open(FILENAME, 'rb') as f:
     data = pickle.load(f)
@@ -27,8 +26,8 @@ stim = data['stim']
 rho = data['rho']
 
 # Fill in these values
-sampling_period = 2*len(stim) # in ms
-num_timesteps = len(stim)
+sampling_period = None
+num_timesteps = None
 
 sta = compute_sta(stim, rho, num_timesteps)
 
